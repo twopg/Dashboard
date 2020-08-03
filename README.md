@@ -1,5 +1,6 @@
 # 2PG Dashboard
 Dashboard to customize 2PG; made with TypeScript + Angular 9 -> https://2pg.xyz
+[![Run on Repl.it](https://repl.it/badge/github/theADAMJR/2PG-Dashboard)](https://repl.it/github/theADAMJR/2PG-Dashboard)
 
 **Used by**: [2PG](https://2pg.xyz), [3PG](https://3pg.xyz), [6PG](https://github.com/theADAMJR/6PG), [DBots](https://dbots.co)
 
