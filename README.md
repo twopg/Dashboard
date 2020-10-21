@@ -1,6 +1,9 @@
 # 2PG Dashboard
 Dashboard to customize 2PG; made with TypeScript + Angular 9 -> https://2pg.xyz
 
+2PG Bot Series - https://www.youtube.com/watch?v=rYpR0CiEGgk&list=PLGfT2ttRbfixMStpAhPD4pKBQN9wjJmbP&index=1
+2PG Dashboard Series - https://www.youtube.com/watch?v=rYpR0CiEGgk&list=PLGfT2ttRbfizIr60zU_S_6_i8O3xmP9ia&index=1
+
 **Used by**: [2PG](https://2pg.xyz), [3PG](https://github.com/3PG), [6PG](https://github.com/theADAMJR/6PG), [DBots](https://github.com/DBots-co), [DList](https://github.com/DList-xyz), [DClone](https://github.com/theADAMJR/DClone)
 
 ![Guild Dashboard](https://i.ibb.co/n3D80Dx/2-PG-Dashboard.png)
