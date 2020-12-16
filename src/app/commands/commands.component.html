@@ -36,6 +36,8 @@
           <zippy [title]="command.name">
             <p class="m-0"><strong>Usage</strong>: <code>{{ command.usage }}</code></p>
             <p class="m-0"><strong>Summary</strong>: {{ command.summary }}</p>
+            <p *ngIf="command.precondition"
+              class="m-0"><strong>Permission</strong>: <code>{{ command.precondition | snakeToSentenceCase }}</code></p>
           </zippy>
         </li>
       </ul>

@@ -15,4 +15,8 @@ export class ApiService {
   getStats(): Promise<any> {
     return this.http.get(`${this.endpoint}/stats?key=${this.key}`).toPromise();
   }
+
+  async sendFeedback(message: string) {
+    return this.http.post(`${this.endpoint}/feedback`, { message }).toPromise();
+  }
 }

@@ -28,6 +28,7 @@ export class MusicModuleComponent extends ModuleConfig implements OnInit {
 
   async ngOnInit() {
     await super.init();
+    await this.service.updateList(this.guildId);
   }
   
   buildForm({ music }) {

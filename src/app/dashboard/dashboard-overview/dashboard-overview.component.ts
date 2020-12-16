@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -9,7 +10,9 @@ import { UserService } from '../../services/user.service';
 export class DashboardOverviewComponent {
   get user() { return this.userService.user; }
 
-  constructor(private userService: UserService) {
+  constructor(
+    public apiService: ApiService,
+    private userService: UserService) {
     document.title = '2PG - Dashboard';
   }
 }

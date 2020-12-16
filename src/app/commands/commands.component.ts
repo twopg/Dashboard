@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommandsService } from '../services/commands.service';
-import { sentenceToCamelCase, kebabToCamelCase } from '../utils';
+import { kebabToCamelCase } from '../utils';
 
 @Component({
   selector: 'app-commands',
@@ -33,7 +33,8 @@ export class CommandsComponent implements OnInit {
   setModule(name: string) {
     this.selectedModule = name;
     this.displayedCommands = this.commands
-      .filter(c => kebabToCamelCase(c.module) === name);    
+      .filter(c => kebabToCamelCase(c.module) === name)
+      .sort((a, b) => a.name > b.name ? 1 : -1);
   }
 
   search(query: string) {
