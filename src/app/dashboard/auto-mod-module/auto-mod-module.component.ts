@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./auto-mod-module.component.css']
 })
 export class AutoModModuleComponent extends ModuleConfig implements OnInit {
-  filters = [ MessageFilter.Links, MessageFilter.Words, MessageFilter.MassMention, MessageFilter.MassCaps ];
+  filters = [ MessageFilter.Links, MessageFilter.Words, MessageFilter.MassMention, MessageFilter.MassCaps, MessageFilter.Toxicity ];
   moduleName = 'autoMod';
 
   constructor(
@@ -43,5 +43,6 @@ export enum MessageFilter {
   Links = 'LINKS',
   MassCaps = 'MASS_CAPS',
   MassMention = 'MASS_MENTION',
-  Words = 'WORDS'
+  Words = 'WORDS',
+  Toxicity = 'TOXICITY'
 }
