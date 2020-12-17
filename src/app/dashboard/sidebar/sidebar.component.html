@@ -1,42 +1,42 @@
 <mat-sidenav-container fullscreen>
-    <mat-sidenav #drawer mode="side" opened>
-        <div class="guilds px-2">
-            <div class="user">
-                <div routerLink="/dashboard" class="guild-icon">
-                    <img [src]="user.displayAvatarURL" alt="{{ user.username }}">
-                </div>
-                <hr class="guild-seperator">
-            </div>
-            <div *ngFor="let guild of guilds" [routerLink]="['/servers/' + guild.id]"
-                class="guild-icon"
-                [matTooltip]="guild.name">
-                <img *ngIf="guild.iconURL"
-                    [src]="guild.iconURL" [alt]="guild.name">
-                <span *ngIf="!guild.iconURL"
-                    class="d-flex justify-content-center">{{ guild.nameAcronym }}</span>
-            </div>
-            <div routerLink="/invite" 
-                class="guild-icon invite"
-                matTooltip="Add a Server">
-                <span class="add-guild pt-0 d-flex justify-content-center flex-column">+</span>
-            </div>
+  <mat-sidenav #drawer mode="side" opened>
+    <div class="guilds px-2">
+      <div class="user">
+        <div routerLink="/dashboard" class="guild-icon">
+          <img [src]="user.displayAvatarURL" alt="{{ user.username }}">
         </div>
-        <div class="options">
-            <ng-content select=".side-nav"></ng-content>
-            <span (click)="toggle()"
-                class="float-right d-sm-none d-block close">&times;</span>
+        <hr class="guild-seperator">
+      </div>
+      <div *ngFor="let guild of guilds" [routerLink]="['/servers/' + guild.id]"
+        class="guild-icon"
+        [matTooltip]="guild.name">
+        <img *ngIf="guild.iconURL"
+          [src]="guild.iconURL" [alt]="guild.name">
+        <span *ngIf="!guild.iconURL"
+          class="d-flex justify-content-center">{{ guild.nameAcronym }}</span>
+      </div>
+      <div routerLink="/invite" 
+        class="guild-icon invite"
+        matTooltip="Add a Server">
+        <span class="add-guild pt-0 d-flex justify-content-center flex-column">+</span>
+      </div>
+    </div>
+    <div class="options">
+      <ng-content select=".side-nav"></ng-content>
+      <span (click)="toggle()"
+        class="float-right d-sm-none d-block close">&times;</span>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <navbar></navbar>
+    <button class="toggle">
+      <div id="nav-icon1" class="open"
+        (click)="toggle()">
+        <span></span>
+        <span></span>
+        <span></span>
         </div>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <navbar></navbar>
-        <button class="toggle">
-            <div id="nav-icon1" class="open"
-                (click)="toggle()">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-        </button>
-        <ng-content select="#content"></ng-content>
-    </mat-sidenav-content>
+    </button>
+    <ng-content select="#content"></ng-content>
+  </mat-sidenav-content>
 </mat-sidenav-container>

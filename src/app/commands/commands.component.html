@@ -1,7 +1,7 @@
 <navbar></navbar>
 <header class="container jumbotron text-center pb-2">
   <h1 class="display-3">Commands</h1>
-  <p class="lead">View a list of 2PG's Discord chat commands</p>
+  <p class="lead">View a list of 2PG's Discord chat commands.</p>
 </header>
 <section class="container px-lg-5">
   <div class="d-flex justify-content-center">
@@ -27,6 +27,17 @@
             [class]="mod.icon"></i>
           <span>{{ mod.name | camelToSentenceCase }}</span>
         </li>
+
+        <div *ngIf="guild">
+          <p class="category">{{ guild.name }}</p>
+
+          <li (click)="setModule('custom')"
+            class="list-group-item my-1 rounded cursor-pointer"
+            [class.active]="selectedModule === 'custom'">
+            <i class="fas fa-cogs mr-1 text-warning"></i>
+            <span>Custom</span>
+          </li>
+        </div>
       </ul>
     </div>
     <div class="col-sm-9">
@@ -38,6 +49,8 @@
             <p class="m-0"><strong>Summary</strong>: {{ command.summary }}</p>
             <p *ngIf="command.precondition"
               class="m-0"><strong>Permission</strong>: <code>{{ command.precondition | snakeToSentenceCase }}</code></p>
+            <p *ngIf="command.anywhere"
+              class="m-0"><strong>Executable Anywhere?</strong>: <code>{{ command.anywhere }}</code></p>
           </zippy>
         </li>
       </ul>

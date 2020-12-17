@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./auto-mod-module.component.css']
 })
 export class AutoModModuleComponent extends ModuleConfig implements OnInit {
-  filters = [ MessageFilter.Links, MessageFilter.Words, MessageFilter.MassMention, MessageFilter.MassCaps, MessageFilter.Toxicity ];
+  filters = [ MessageFilter.Links, MessageFilter.Words, MessageFilter.MassMention, MessageFilter.MassCaps ];
   moduleName = 'autoMod';
 
   constructor(

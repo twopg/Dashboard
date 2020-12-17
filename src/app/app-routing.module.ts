@@ -27,6 +27,8 @@ import { PlusComponent } from './plus/plus.component';
 import { CanDeactivateDashboard } from './guards/can-deactivate-dashboard.guard';
 import { ReactionRolesModuleComponent } from './dashboard/reaction-roles-module/reaction-roles-module.component';
 import { StatsComponent } from './stats/stats.component';
+import { environment } from 'src/environments/environment';
+import { DocsComponent } from './docs/docs.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -40,6 +42,9 @@ const routes: Routes = [
 
   { path: 'dashboard', component: DashboardOverviewComponent, canActivate: [DashboardAuthGuard] },
   { path: 'dashboard/xp-card', component: XPCardComponent, canActivate: [DashboardAuthGuard] },
+
+  { path: 'docs', component: DocsComponent },
+  { path: 'docs/**', component: DocsComponent },
 
   { path: 'servers/:id', component: GuildComponent, canActivate: [GuildAuthGuard], canDeactivate: [CanDeactivateDashboard] },
   { path: 'servers/:id/auto-mod', component: AutoModModuleComponent, canActivate: [GuildAuthGuard], canDeactivate: [CanDeactivateDashboard] },

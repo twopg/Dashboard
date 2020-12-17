@@ -59,6 +59,7 @@ import { StatsComponent } from './stats/stats.component';
 import { PopularInputsGraphComponent } from './stats/popular-inputs-graph/popular-inputs-graph.component';
 import { PopularCommandsGraphComponent } from './stats/popular-commands-graph/popular-commands-graph.component';
 import { WavesComponent } from './waves/waves.component';
+import { DocsComponent } from './docs/docs.component';
 
 @Injectable()
 export class AlertErrorHandler implements ErrorHandler {
@@ -129,7 +130,8 @@ export class AlertErrorHandler implements ErrorHandler {
     StatsComponent,
     PopularInputsGraphComponent,
     PopularCommandsGraphComponent,
-    WavesComponent
+    WavesComponent,
+    DocsComponent
   ],
   imports: [
     AppRoutingModule,

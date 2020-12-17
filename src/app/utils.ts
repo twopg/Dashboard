@@ -22,9 +22,11 @@ export function sentenceToCamelCase(words: string) {
 }
 
 export function kebabToCamelCase(words: string) {
+  if (!words) return null;
+
   const arr = words.split('-');
-  const capital = arr.map((item, index) =>
-    index ? item.charAt(0).toUpperCase() + item.slice(1).toLowerCase() : item);
+  const capital = arr.map((item, index) => (index)
+    ? item.charAt(0).toUpperCase() + item.slice(1).toLowerCase() : item);
 
   const capitalized = capital.join('');
   return capitalized[0].toLowerCase() + capitalized.slice(1);
