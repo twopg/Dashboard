@@ -24,7 +24,6 @@ import { LeaderboardAuthGuard } from './guards/leaderboard-auth.guard';
 import { XPCardComponent } from './xp-card/xp-card.component';
 import { PaymentSuccessComponent } from './payment-success/payment-success.component';
 import { PlusComponent } from './plus/plus.component';
-import { DocsComponent } from './docs/docs.component';
 import { CanDeactivateDashboard } from './guards/can-deactivate-dashboard.guard';
 import { ReactionRolesModuleComponent } from './dashboard/reaction-roles-module/reaction-roles-module.component';
 import { StatsComponent } from './stats/stats.component';
@@ -33,8 +32,6 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'commands', component: CommandsComponent },
   { path: 'auth', component: AuthComponent },
-  { path: 'docs', component: DocsComponent },
-  { path: 'docs/:page', component: DocsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },
   { path: 'stats', component: StatsComponent },

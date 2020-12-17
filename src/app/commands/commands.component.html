@@ -23,7 +23,7 @@
           (click)="setModule(mod.name)"
           class="list-group-item my-1 rounded cursor-pointer"
           [class.active]="mod.name === selectedModule">
-          <i class="fas mr-1"
+          <i class="fas mr-1 text-warning"
             [class]="mod.icon"></i>
           <span>{{ mod.name | camelToSentenceCase }}</span>
         </li>
