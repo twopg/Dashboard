@@ -39,10 +39,8 @@ import { SaveChangesComponent } from './dashboard/save-changes/save-changes.comp
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PaymentSuccessComponent } from './payment-success/payment-success.component';
 import { PlusComponent } from './plus/plus.component';
-import { DocsComponent } from './docs/docs.component';
 import { CleanDateTimePipe } from './pipes/clean-date-time.pipe';
 import { MemberUsernameComponent } from './member-username/member-username.component';
-import { DocsSidebarComponent } from './docs-sidebar/docs-sidebar.component';
 import { ZippyComponent } from './zippy/zippy.component';
 import { AuditLogWidgetComponent } from './dashboard/widgets/audit-log-widget/audit-log-widget.component';
 import { CommandsWidgetComponent } from './dashboard/widgets/commands-widget/commands-widget.component';
@@ -61,6 +59,7 @@ import { StatsComponent } from './stats/stats.component';
 import { PopularInputsGraphComponent } from './stats/popular-inputs-graph/popular-inputs-graph.component';
 import { PopularCommandsGraphComponent } from './stats/popular-commands-graph/popular-commands-graph.component';
 import { WavesComponent } from './waves/waves.component';
+import { DocsComponent } from './docs/docs.component';
 
 @Injectable()
 export class AlertErrorHandler implements ErrorHandler {
@@ -111,10 +110,8 @@ export class AlertErrorHandler implements ErrorHandler {
     NotFoundComponent,
     PaymentSuccessComponent,
     PlusComponent,
-    DocsComponent,
     CleanDateTimePipe,
     MemberUsernameComponent,
-    DocsSidebarComponent,
     ZippyComponent,
     AuditLogWidgetComponent,
     CommandsWidgetComponent,
@@ -133,7 +130,8 @@ export class AlertErrorHandler implements ErrorHandler {
     StatsComponent,
     PopularInputsGraphComponent,
     PopularCommandsGraphComponent,
-    WavesComponent
+    WavesComponent,
+    DocsComponent
   ],
   imports: [
     AppRoutingModule,

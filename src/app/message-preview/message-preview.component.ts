@@ -25,24 +25,23 @@ export class MessagePreviewComponent {
   constructor(private userService: UserService) {}
 
   get timestamp() {
-    const timestamp = this.createdAt.toLocaleTimeString('en-US', {
-      hour: 'numeric',
-      hour12: true,
-      minute: 'numeric'
-    });
+    const createdAt = new Date(this.createdAt ?? new Date());
+    const timestamp = createdAt
+      .toTimeString()
+      .slice(0, 5);
 
-    const wasToday = new Date().getDay() / this.createdAt.getDay() === 1;
-    const wasYesterday = new Date().getDate() % this.createdAt.getDate() === 1;
-    const isTommorow = this.createdAt.getTime() % new Date().getDate() === 1;
+    const wasToday = new Date().getDay() / createdAt.getDay() === 1;
+    const wasYesterday = new Date().getDate() % createdAt.getDate() === 1;
+    const isTommorow = createdAt.getTime() % new Date().getDate() === 1;
     
-    if (wasToday || wasYesterday)
+    if (wasToday)
       return `Today at ${timestamp}`;
     if (wasYesterday)
       return `Yesterday at ${timestamp}`;
     else if (isTommorow)
       return `Tommorow at ${timestamp}`;
 
-    return this.createdAt
+    return createdAt
       .toJSON()
       .slice(0,10)
       .split('-')

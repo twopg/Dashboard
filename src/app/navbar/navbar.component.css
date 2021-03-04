@@ -1,24 +1,27 @@
 nav.navbar {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 img {
-    max-width: 32px;
-    border-radius: 50%;   
+  max-width: 32px;
+}
+
+.dropdown img {
+  border-radius: 50%;
 }
 
 .dropdown-menu {
-    background: var(--background-secondary);
+  background: var(--background-secondary);
 }
 
-.dropdown-menu a {    
-    color: white;
+.dropdown-menu a {  
+  color: white;
 }
 
 .dropdown-menu a:hover {
-    background-color: var(--background-primary);
+  background-color: var(--background-primary);
 }
 
 a {
-    cursor: pointer;
+  cursor: pointer;
 }

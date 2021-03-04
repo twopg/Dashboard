@@ -43,5 +43,6 @@ export enum MessageFilter {
   Links = 'LINKS',
   MassCaps = 'MASS_CAPS',
   MassMention = 'MASS_MENTION',
-  Words = 'WORDS'
+  Words = 'WORDS',
+  Toxicity = 'TOXICITY'
 }

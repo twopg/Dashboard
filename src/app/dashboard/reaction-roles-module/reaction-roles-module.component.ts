@@ -16,7 +16,7 @@ export class ReactionRolesModuleComponent extends ModuleConfig implements OnInit
   moduleName = 'reactionRoles';
 
   reactionRoleMessages = [];
-  reactionRolesIndices = toIterable(4);
+  reactionRolesIndices = toIterable(8);
 
   get reactionRoles() { return this.savedGuild.reactionRoles; }
 

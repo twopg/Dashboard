@@ -8,6 +8,7 @@ export const environment = {
   discordInvite: 'https://discord.gg/24tycau',
   githubURL: 'https://github.com/theADAMJR/2PG',
   stripePublicKey: 'pk_test_rjQKo5c9pcHvDFjFe1mfdKib00Es3eJ831',
+  docsURL: 'https://docs.2pg.xyz',
   version: 'v0.3.1b',
   botOwnerId: '218459216145285121',
   test: {

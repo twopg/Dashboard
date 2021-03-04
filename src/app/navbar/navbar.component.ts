@@ -8,9 +8,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  githubURL = environment.githubURL;
-  discordInvite = environment.discordInvite;
-  botOwnerId = environment.botOwnerId;
+  environment = environment;
 
   get user() { return this.userService.user; }
 
