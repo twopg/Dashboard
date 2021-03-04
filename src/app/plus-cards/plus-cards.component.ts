@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { environment } from 'src/environments/environment';
-import { Stripe, loadStripe } from '@stripe/stripe-js';
 import { PayService } from '../services/pay.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'plus-cards',
@@ -11,19 +11,22 @@ import { PayService } from '../services/pay.service';
 })
 export class PlusCardsComponent {
   checkoutEndpoint = `${environment.endpoint}/pay`;
-  stripe: Stripe;
 
   constructor(
+    private route: ActivatedRoute,
     private pay: PayService,
-    public userService: UserService) {}
+    public userService: UserService
+  ) {}
   
   async ngOnInit() {
     await this.userService.init();
-    this.stripe = await loadStripe(environment.stripePublicKey);
+
+    const status = this.route.snapshot.queryParamMap.get('payment_status');
+    if (status === 'failed')
+      alert('Payment Failed');
   }
 
   async checkout(plan: number) {
-    const { id } = await this.pay.createSession(plan);
-    await this.stripe.redirectToCheckout({ sessionId: id });
+    window.location.href = this.pay.payURL(plan);
   }
 }
