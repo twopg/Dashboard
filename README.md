@@ -7,10 +7,10 @@ Dashboard to customize 2PG; made with TypeScript + Angular 9 -> https://2pg.xyz
 
 2PG Dashboard Series - https://www.youtube.com/watch?v=rYpR0CiEGgk&list=PLGfT2ttRbfizIr60zU_S_6_i8O3xmP9ia&index=1
 
-**Used by**: [2PG](https://2pg.xyz), [3PG](https://github.com/3PG), [6PG](https://github.com/theADAMJR/6PG), [DBots](https://github.com/DBots-co), [DList](https://github.com/DList-xyz), [DClone](https://github.com/theADAMJR/DClone)
+**Used by**: [2PG](https://github.com/twopg), [3PG](https://github.com/3PG), [6PG](https://github.com/theADAMJR/6PG), [DBots](https://github.com/DBots-co), [DList](https://github.com/DList-xyz), [DClone](https://github.com/D-Clone)
 
 ![Guild Dashboard](https://i.ibb.co/n3D80Dx/2-PG-Dashboard.png)
-![Audit Log](https://2pg.xyz/assets/docs/img/dashboard-v0.2.0b.png)
+![Audit Log](https://2pg.xyz/assets/docs/img/dashboard-v0.3.1b.png)
 
 ## Prerequisites
 - Know how to use JavaScript, TypeScript, and Angular 9
