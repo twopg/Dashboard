@@ -1,4 +1,4 @@
-import { PremiumDirective } from './dashboard/directives/premium.directive';
+import { PremiumDirective } from '../directives/premium.directive';
 
 describe('PremiumDirective', () => {
   it('should create an instance', () => {

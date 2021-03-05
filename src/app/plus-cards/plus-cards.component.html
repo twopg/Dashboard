@@ -21,7 +21,7 @@
               class="d-flex justify-content-center"
               [action]="checkoutEndpoint" method="GET">
               <button *ngIf="userService.user && userService.savedUser?.premium"
-                class="checkout my-3" color="success" mat-button disabled>You've Maxed Out</button>
+                class="checkout my-3 bg-warning" mat-button><i class="fab fa-paypal"></i> Buy Again</button>
               <button *ngIf="userService.user && !userService.savedUser?.premium"
                 (click)="checkout(0)"
                 class="checkout my-3 bg-warning" mat-button><i class="fab fa-paypal"></i> Buy</button>
@@ -47,7 +47,7 @@
             </div>
             <form class="d-flex justify-content-center" [action]="checkoutEndpoint" method="GET">
               <button *ngIf="userService.user && userService.savedUser?.premium"
-                class="checkout my-3" color="success" mat-button disabled>You've Maxed Out</button>
+                class="checkout my-3 bg-warning" mat-button><i class="fab fa-paypal"></i> Buy Again</button>
               <button *ngIf="userService.user && !userService.savedUser?.premium" (click)="checkout(1)"
                 class="checkout my-3 bg-warning" mat-button><i class="fab fa-paypal"></i> Buy</button>
               <button *ngIf="!userService.user" routerLink="/login"
@@ -72,7 +72,7 @@
             </div>
             <form class="d-flex justify-content-center" [action]="checkoutEndpoint" method="GET">
               <button *ngIf="userService.user && userService.savedUser?.premium"
-                class="checkout my-3" color="success" mat-button disabled>You've Maxed Out</button>
+                class="checkout my-3 bg-warning" mat-button><i class="fab fa-paypal"></i> Buy Again</button>
               <button *ngIf="userService.user && !userService.savedUser?.premium" (click)="checkout(2)"
                 class="checkout my-3 bg-warning" mat-button><i class="fab fa-paypal"></i> Buy</button>
               <button *ngIf="!userService.user" routerLink="/login"

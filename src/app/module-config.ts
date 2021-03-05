@@ -1,7 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { SaveChangesComponent } from './dashboard/save-changes/save-changes.component';
+import { SaveChangesComponent } from './utils/discord/save-changes/save-changes.component';
 import { GuildService } from './services/guild.service';
 import {  OnDestroy, Directive } from '@angular/core';
 import { MatChipInputEvent } from '@angular/material/chips';
