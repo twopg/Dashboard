@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRoute, CanActivate, Router } from '@angular/router';
+import { GuildService } from '../services/guild.service';
 import { UserService } from '../services/user.service';
 
 @Injectable({
@@ -10,6 +11,7 @@ export class DashboardAuthGuard implements CanActivate {
     private route: ActivatedRoute,
     private router: Router,
     private userService: UserService,
+    private guildService: GuildService,
   ) {}
 
   async canActivate() {
@@ -17,7 +19,7 @@ export class DashboardAuthGuard implements CanActivate {
 
     const likelyFromDiscord = this.route.snapshot.queryParamMap.has('code');
     if (likelyFromDiscord)
-      
+      await this.guildService.updateGuilds(true);
 
     const canActivate = Boolean(this.userService.user); 
     if (!canActivate)
