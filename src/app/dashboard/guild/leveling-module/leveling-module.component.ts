@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { GuildService } from '../../services/guild.service';
+import { GuildService } from '../../../services/guild.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ModuleConfig } from '../../module-config';
+import { ModuleConfig } from '../../../module-config';
 import { slideUpDown } from './leveling-module.animations';
 
 @Component({

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ModuleConfig } from '../../module-config';
+import { ModuleConfig } from '../../../module-config';
 import { FormControl, FormGroup, FormArray, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { GuildService } from '../../services/guild.service';
+import { GuildService } from '../../../services/guild.service';
 
 @Component({
   selector: 'app-announce-module',

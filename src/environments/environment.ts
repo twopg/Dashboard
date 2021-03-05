@@ -3,17 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  endpoint: 'http://localhost:3000/api',
-  discordInvite: 'https://discord.gg/24tycau',
-  githubURL: 'https://github.com/theADAMJR/2PG',
-  stripePublicKey: 'pk_test_rjQKo5c9pcHvDFjFe1mfdKib00Es3eJ831',
-  docsURL: 'https://docs.2pg.xyz',
-  version: 'v0.3.1b',
   botOwnerId: '218459216145285121',
-  test: {
-    guildId: '685862664223850497'
-  }
+  docsURL: 'https://docs.2pg.xyz',
+  discordInvite: 'https://discord.gg/24tycau',
+  endpoint: 'http://localhost:3000/api',
+  githubURL: 'https://github.com/theADAMJR/2PG',
+  production: false,
+  stripePublicKey: 'pk_test_rjQKo5c9pcHvDFjFe1mfdKib00Es3eJ831',
+  version: 'v0.3.1b',
 };
 
 /*

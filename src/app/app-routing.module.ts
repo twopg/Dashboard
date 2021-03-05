@@ -8,15 +8,15 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { InviteComponent } from './pages/auth/invite/invite.component';
 import { LogoutComponent } from './pages/auth/logout/logout.component';
 import { DashboardOverviewComponent } from './dashboard/dashboard/dashboard-overview/dashboard-overview.component';
-import { GuildComponent } from './dashboard/guild/guild.component';
+import { GuildComponent } from './dashboard/guild/guild/guild.component';
 import { DashboardAuthGuard } from './guards/dashboard-auth.guard';
 import { GuildAuthGuard } from './guards/guild-auth.guard';
 import { GeneralModuleComponent } from './dashboard/guild/general-module/general-module.component';
-import { LevelingModuleComponent } from './dashboard/leveling-module/leveling-module.component';
+import { LevelingModuleComponent } from './dashboard/guild/leveling-module/leveling-module.component';
 import { MusicModuleComponent } from './dashboard/guild/music-module/music-module.component';
 import { AutoModModuleComponent } from './dashboard/guild/auto-mod-module/auto-mod-module.component';
-import { LogsModuleComponent } from './dashboard/dashboard/logs-module/logs-module.component';
-import { LogModuleComponent } from './dashboard/log-module/log-module.component';
+import { LogsModuleComponent } from './dashboard/guild/logs-module/logs-module.component';
+import { LogModuleComponent } from './dashboard/guild/log-module/log-module.component';
 import { SettingsModuleComponent } from './dashboard/dashboard/settings-module/settings-module.component';
 import { CommandsModuleComponent } from './dashboard/guild/commands-module/commands-module.component';
 import { LeaderboardModuleComponent } from './dashboard/guild/leaderboard-module/leaderboard-module.component';
@@ -27,8 +27,6 @@ import { PlusComponent } from './pages/plus/plus/plus.component';
 import { CanDeactivateDashboard } from './guards/can-deactivate-dashboard.guard';
 import { ReactionRolesModuleComponent } from './dashboard/dashboard/reaction-roles-module/reaction-roles-module.component';
 import { StatsComponent } from './stats/stats.component';
-import { environment } from 'src/environments/environment';
-import { DocsComponent } from './docs/docs.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -42,9 +40,6 @@ const routes: Routes = [
 
   { path: 'dashboard', component: DashboardOverviewComponent, canActivate: [DashboardAuthGuard] },
   { path: 'dashboard/xp-card', component: XPCardComponent, canActivate: [DashboardAuthGuard] },
-
-  { path: 'docs', component: DocsComponent },
-  { path: 'docs/**', component: DocsComponent },
 
   { path: 'servers/:id', component: GuildComponent, canActivate: [GuildAuthGuard], canDeactivate: [CanDeactivateDashboard] },
   { path: 'servers/:id/auto-mod', component: AutoModModuleComponent, canActivate: [GuildAuthGuard], canDeactivate: [CanDeactivateDashboard] },

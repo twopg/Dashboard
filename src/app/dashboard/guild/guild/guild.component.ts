@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { GuildService } from '../../services/guild.service';
+import { GuildService } from '../../../services/guild.service';
 
 @Component({
   selector: 'app-guild',
