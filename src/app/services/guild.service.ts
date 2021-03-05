@@ -24,9 +24,9 @@ export class GuildService {
       await this.updateGuilds();
   }
 
-  async updateGuilds() {
+  async updateGuilds(force = false) {
     this._guilds = (this.key) ? 
-      await this.http.get(`${this.endpoint}?key=${this.key}`).toPromise() as any : [];
+      await this.http.get(`${this.endpoint}?key=${this.key}&force=${force}`).toPromise() as any : [];
   }
 
   getGuild(id: string) {

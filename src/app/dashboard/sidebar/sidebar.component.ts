@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { moveItemInArray, CdkDragDrop } from '@angular/cdk/drag-drop';
 import { UserService } from '../../services/user.service';
 import { GuildService } from '../../services/guild.service';
 import { MatDrawer } from '@angular/material/sidenav';

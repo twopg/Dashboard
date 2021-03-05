@@ -1,30 +1,30 @@
 <sidebar>
-    <div class="side-nav navbar-dark">
-        <div class="header">
-            <img [src]="user.displayAvatarURL" [alt]="user.username">
-            <h4 routerLink="/dashboard">{{ user.username }}</h4></div>
-            <div class="navbar-nav">
-                <div class="category">User</div>
-                <a routerLink="/dashboard/xp-card"
-                    routerLinkActive="active"
-                    class="nav-item nav-link">
-                    <i class="fa fa-star" aria-hidden="true"></i> XP Card</a>
-                <form #f="ngForm" [formGroup]="form">
-                    <div class="category">Other</div>
-                    <mat-form-field appearance="outline" class="ml-3 m-2">
-                        <mat-label>Theme</mat-label>
-                        <mat-select formControlName="theme" #themeSelect>
-                            <mat-option value="CHOCOLATE">Chocolate</mat-option>
-                            <mat-option value="COSMIC">Cosmic</mat-option>
-                            <mat-option value="DISCORD">Discord</mat-option>
-                            <mat-option value="IONIC" selected>Ionic (Default)</mat-option>
-                            <mat-option value="TWILIGHT">Twilight</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </form>
-            </div>
-        </div>
-    <div id="content">
-        <ng-content></ng-content>
+  <div class="side-nav navbar-dark">
+    <div class="header">
+      <img [src]="user.displayAvatarURL" [alt]="user.username">
+      <h4 routerLink="/dashboard">{{ user.username }}</h4></div>
+      <div class="navbar-nav">
+        <div class="category">User</div>
+        <a routerLink="/dashboard/xp-card"
+          routerLinkActive="active"
+          class="nav-item nav-link">
+          <i class="fa fa-star" aria-hidden="true"></i> XP Card</a>
+        <form #f="ngForm" [formGroup]="form">
+          <div class="category">Other</div>
+          <mat-form-field appearance="outline" class="ml-3 m-2">
+            <mat-label>Theme</mat-label>
+            <mat-select formControlName="theme" #themeSelect>
+              <mat-option value="CHOCOLATE">Chocolate</mat-option>
+              <mat-option value="COSMIC">Cosmic</mat-option>
+              <mat-option value="DISCORD">Discord</mat-option>
+              <mat-option value="IONIC" selected>Ionic (Default)</mat-option>
+              <mat-option value="TWILIGHT">Twilight</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </div>
     </div>
+  <div id="content">
+    <ng-content></ng-content>
+  </div>
 </sidebar>

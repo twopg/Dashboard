@@ -72,6 +72,18 @@ body {
     --background-secondary: #111720;
     --background-tertiary: #10151d;
 }
+:root[theme=CLONE] {
+    --primary: #6E8481;
+    --secondary: #A2B6AD;
+    --tertiary: #576067;
+  
+    --heading: white;
+    --font: #CACBCD;
+    
+    --background-primary: #414244;
+    --background-secondary: #37373a;
+    --background-tertiary: #323335;    
+}
 
 $primary-palette: (
     50 : #e9f0f1,

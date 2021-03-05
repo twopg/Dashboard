@@ -1,20 +1,4 @@
 <dashboard-sidebar>
-  <div class="alert alert-info mx-5">
-    Hello there {{ user.username }}! Welcome to the 2PG dashboard.
-    You likely found 2PG on top.gg, if so, feedback on your first impressions would be great!
-    <br>
-    We are trying to continuously improve 2PG, and remove any obstacles that stop it from giving you a better experience than other bots.
-    <br>
-    Also, the code of 2PG is also completely free to use - <a href="https://github.com/twopg/Bot">2PG Code</a>.
-    <br>
-    <br>
-    If you'd like to help 2PG be accessible for everyone, <a href="https://top.gg/bot/685867703352819720/vote">voting on top.gg</a> would really help out!
-    <br>
-    <a href="https://top.gg/bot/685867703352819720/vote">
-      <img src="https://top.gg/api/widget/upvotes/685867703352819720.svg" alt="2PG" />
-    </a>
-  </div>
-
   <div class="container">
     <h1 class="display-3 mb-3">Hey, {{ user.username }}</h1>
     <p class="text-muted mb-5">Here you can manage your guilds, edit your XP card, and more!</p>
@@ -26,21 +10,21 @@
         <img src="https://dlist.xyz/api/v1/guilds/685862664223850497/widget?size=small" alt="View on DList">
       </a>
     </div>
-  </div>
 
-  <div class="mt-3 mx-5 text-center" #feedbackForm>
-    <br>
-    <strong>First Impressions / Feedback / Bug Report</strong>:
-    <br>
-    <mat-form-field appearance="outline">
-      <mat-label>Feedback</mat-label>
-      <input type="text" matInput #feedback>
-    </mat-form-field>
-    <button
-      #feedbackButton
-      [disabled]="!feedback.value"
-      class="btn btn-success ml-3 mb-2"
-      (click)="apiService.sendFeedback(feedback.value) && feedbackForm.innerHTML = 'Thank you for your feedback!'"
-      matButton>Send</button>
+    <div class="mt-3" #feedbackForm>
+      <br>
+      <strong>First Impressions / Feedback / Report Bug</strong>:
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Feedback</mat-label>
+        <input type="text" matInput #feedback>
+      </mat-form-field>
+      <button
+        #feedbackButton
+        [disabled]="!feedback.value"
+        class="btn btn-success ml-3 mb-2"
+        (click)="apiService.sendFeedback(feedback.value) && feedbackForm.innerHTML = 'Thank you for your feedback!'"
+        matButton>Send</button>
+    </div>
   </div>
 </dashboard-sidebar>

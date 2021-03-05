@@ -19,6 +19,7 @@
             </div>
             <button
               *ngIf="userService.user && userService.savedUser?.premium"
+              (click)="checkout.emit()"
               class="checkout my-3 bg-warning"
               mat-button>
               <i class="fab fa-paypal"></i> Buy Again
