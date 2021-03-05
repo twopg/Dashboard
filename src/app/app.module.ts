@@ -52,7 +52,6 @@ import { DurationStringPipe } from './pipes/duration-string.pipe';
 import { CamelToSentenceCasePipe } from './pipes/camel-to-sentence-case.pipe';
 import { MessagePreviewComponent } from './utils/discord/message-preview/message-preview.component';
 import { ReactionRolesModuleComponent } from './dashboard/dashboard/reaction-roles-module/reaction-roles-module.component';
-import { PlusCardsComponent } from './plus-cards/plus-cards.component';
 import { PlusPaywallComponent } from './utils/plus-paywall/plus-paywall.component';
 import { PlusBadgeComponent } from './utils/plus-badge/plus-badge.component';
 import { StatsComponent } from './stats/stats.component';
@@ -124,7 +123,6 @@ export class AlertErrorHandler implements ErrorHandler {
     LogModuleComponent,
     LogsModuleComponent,
     ReactionRolesModuleComponent,
-    PlusCardsComponent,
     PlusPaywallComponent,
     PlusBadgeComponent,
     StatsComponent,

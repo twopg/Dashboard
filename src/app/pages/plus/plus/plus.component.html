@@ -11,7 +11,23 @@
       <img class="float float-right plus" src="assets/img/2pg-plus-avatar-transparent.svg" alt="2PG Plus Transparent Avatar">
     </div>
   </div>
-  <section id="benefits" class="py-5">
-    <plus-cards></plus-cards>
+  <section
+    id="benefits"
+    class="row py-5">
+    <app-plus-card
+      duration="1 Month"
+      price="2.99"
+      (checkout)="checkout(0)"
+      class="col-sm-4"></app-plus-card>
+    <app-plus-card
+      duration="3 Months"
+      price="4.99"
+      (checkout)="checkout(1)"
+      class="col-sm-4"></app-plus-card>
+      <app-plus-card
+      duration="1 Year"
+      price="14.99"
+      (checkout)="checkout(2)"
+      class="col-sm-4"></app-plus-card>
   </section>
 </div>

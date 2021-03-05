@@ -1,1 +1,44 @@
-<p>plus-card works!</p>
+<section class="price-sec">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="price-table">
+          <div class="card text-center">
+            <div class="title">
+              <i class="fas fa-plus"></i>
+              <h2>{{ duration }}</h2>
+            </div>
+            <div class="price">
+              <h4><sup>$</sup>{{ price }}</h4>
+            </div>
+            <div class="option">
+              <ul>
+                <li><i class="fas fa-check"></i> Full XP Card Customization</li>
+                <li><i class="fas fa-check"></i> Custom Commands</li>
+              </ul>
+            </div>
+            <button
+              *ngIf="userService.user && userService.savedUser?.premium"
+              class="checkout my-3 bg-warning"
+              mat-button>
+              <i class="fab fa-paypal"></i> Buy Again
+            </button>
+            <button
+              *ngIf="userService.user && !userService.savedUser?.premium"
+              (click)="checkout.emit()"
+              class="checkout my-3 bg-warning"
+              mat-button>
+              <i class="fab fa-paypal"></i> Buy
+            </button>
+            <button
+              *ngIf="!userService.user"
+              routerLink="/login"
+              class="checkout my-3"
+              color="success"
+              mat-button>
+              <i class="fas fa-user-alt"></i> Login to Buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
