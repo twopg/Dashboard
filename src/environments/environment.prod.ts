@@ -6,5 +6,5 @@ export const environment = {
   production: true,
   docsURL: 'https://docs.2pg.xyz',
   stripePublicKey: 'pk_live_Y4fYfqvEgZNsllNFo4TeFcmv005D0tNBWQ',
-  version: 'v0.3.1b'
+  version: 'v0.3.2b'
 };

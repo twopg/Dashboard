@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ModuleConfig } from '../../../module-config';
-import { FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { GuildService } from '../../../services/guild.service';
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { toIterable } from 'src/app/utils';
 
 @Component({
   selector: 'app-auto-mod-module',
@@ -11,6 +12,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./auto-mod-module.component.css']
 })
 export class AutoModModuleComponent extends ModuleConfig implements OnInit {
+  maxRules = toIterable(4);
   filters = [ MessageFilter.Links, MessageFilter.Words, MessageFilter.MassMention, MessageFilter.MassCaps ];
   moduleName = 'autoMod';
 
@@ -26,16 +28,27 @@ export class AutoModModuleComponent extends ModuleConfig implements OnInit {
   }
   
   buildForm({ autoMod }: any) {
-    return new FormGroup({
-      banWords: new FormControl(autoMod.banWords ?? []),
-      banLinks: new FormControl(autoMod.banLinks ?? []),
-      filters: new FormControl(autoMod.filters ?? []),
-      autoDeleteMessages: new FormControl(autoMod.autoDeleteMessages ?? true),
-      autoWarnUsers: new FormControl(autoMod.autoWarnUsers ?? false),
-      ignoredRoles: new FormControl(autoMod.ignoredRoles ?? []),
-      filterThreshold: new FormControl(autoMod.filterThreshold ?? 5,
-        [ Validators.min(1), Validators.max(20) ]),
+    const form = new FormGroup({
+      banWords: new FormControl([]),
+      banLinks: new FormControl([]),
+      enabled: new FormControl(true),
+      filters: new FormControl([]),
+      autoDeleteMessages: new FormControl(true),
+      autoWarnUsers: new FormControl(false),
+      ignoredRoles: new FormControl([]),
+      filterThreshold: new FormControl(5, [ Validators.min(1), Validators.max(20) ]),
+      punishments: new FormArray(
+        new Array(this.maxRules.length).fill(
+          new FormGroup({
+            type: new FormControl(''),
+            warnings: new FormControl(5, [ Validators.min(1), Validators.max(100) ]),
+            minutes: new FormControl(5, [ Validators.min(1), Validators.max(60) ])
+          }), 0, this.maxRules.length
+        )
+      )
     });
+    form.patchValue(autoMod);
+    return form;
   }
 }
 

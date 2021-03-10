@@ -35,25 +35,24 @@ export class ReactionRolesModuleComponent extends ModuleConfig implements OnInit
   }
 
   buildForm({ reactionRoles }: any) {
-    const formGroup = new FormGroup({
-      configs: new FormArray([])
+    const emojiPattern = /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff]){1}/gm;
+
+    const form = new FormGroup({
+      configs: new FormArray(
+        new Array(this.reactionRolesIndices.length).fill(
+          new FormGroup({
+            channel: new FormControl(''),
+            role: new FormControl(''),
+            emote: new FormControl('', 
+              Validators.pattern(emojiPattern)),
+            messageId: new FormControl('', Validators.pattern(/[0-9]{18}/g))
+          })
+        )
+      ),
+      enabled: new FormControl(true),
     });
-
-    for (const i of this.reactionRolesIndices) {
-      const config = reactionRoles.configs[i];
-      
-      const emojiPattern = /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff]){1}/gm;
-
-      (formGroup.get('configs') as FormArray).setControl(i,
-        new FormGroup({
-          channel: new FormControl(config?.channel ?? ''),
-          role: new FormControl(config?.role ?? ''),
-          emote: new FormControl(config?.emote ?? '', 
-            Validators.pattern(emojiPattern)),
-          messageId: new FormControl(config?.messageId ?? '', Validators.pattern(/[0-9]{18}/g))
-        }));    
-    }
-    return formGroup;
+    form.patchValue(reactionRoles);
+    return form;
   }
 
   async submit() {
@@ -79,7 +78,9 @@ export class ReactionRolesModuleComponent extends ModuleConfig implements OnInit
 
   filterFormValue() {
     this.form.value.configs = this.form.value.configs
-      .filter(value => Object.keys(value).some(key => value[key]));
+      .filter(value => Object
+        .keys(value)
+        .some(key => value[key]));
   }
 
   getMessage(channelId: string, messageId: string) {

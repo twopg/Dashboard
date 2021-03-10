@@ -7,7 +7,6 @@ import { environment } from 'src/environments/environment';
 })
 export class GuildService {
   endpoint = environment.endpoint + '/guilds';
-  
   singleton = null;
 
   private _guilds = [];

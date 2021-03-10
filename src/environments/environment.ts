@@ -10,7 +10,7 @@ export const environment = {
   githubURL: 'https://github.com/theADAMJR/2PG',
   production: false,
   stripePublicKey: 'pk_test_rjQKo5c9pcHvDFjFe1mfdKib00Es3eJ831',
-  version: 'v0.3.1b',
+  version: 'v0.3.2b',
 };
 
 /*
