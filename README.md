@@ -35,6 +35,10 @@ If you change your redirects, **regen your application secret**.
 
 ---
 
+# Installation
+
+Use `npm install && npm install -g @angular/cli@latest` for the installation
+
 # Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
