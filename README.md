@@ -1,7 +1,7 @@
 # 2PG Dashboard
 Dashboard to customize 2PG; made with TypeScript + Angular 9 -> https://2pg.xyz
 
-[![Discord](https://img.shields.io/discord/685862664223850497?color=46828d&label=Support&style=for-the-badge)](https://discord.io/twopg)
+[![Discord](https://img.shields.io/discord/685862664223850497?color=46828d&label=Support&style=for-the-badge)](https://discord.io/adamjr)
 
 2PG Bot Series - https://www.youtube.com/watch?v=rYpR0CiEGgk&list=PLGfT2ttRbfixMStpAhPD4pKBQN9wjJmbP&index=1
 
