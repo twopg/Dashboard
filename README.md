@@ -1,5 +1,5 @@
 # 2PG Dashboard
-Dashboard to customize 2PG; made with TypeScript + Angular 9 -> https://2pg.xyz
+Dashboard to customize 2PG; made with TypeScript + Angular 9
 
 [![Discord](https://img.shields.io/discord/729699521386381372?color=46828d&label=Support&style=for-the-badge)](https://discord.io/adamjr)
 
